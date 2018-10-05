@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang=en>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
     <meta charset=utf-8>
     <title>Help me choose</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
+    <div class="rubrik">
       <h1>Help me choose...</h1>
+    </div>
+    <div class="rubrik2">
+      <p>THE WINNER IS</p>
+    </div>
     <img src="https://i.imgur.com/9vVnGpo.jpg" alt="cat ice" height="200" width="150">
     <div class="inputSection">
       <div class="inputs">
@@ -15,24 +22,50 @@
       <button class="addOption">Add</button>
     </div>
     <div class="resultSection" ></div>
-    <button>GO</button>
+    <button class="submit">GO</button>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $(function()  {
         $('.resultSection').hide()
+        $('.rubrik2').hide()
 
         var add_option = function()  {
           $('.inputs').append('<input></input>')
         }
-
         $('.addOption').click(add_option)
 
         var change_color=function()  {
           $('body').toggleClass("pink")
         }
+        $('h1').hover(change_color)
 
-        $('h1').click(change_color)
+        var change_color=function()  {
+          $('body').toggleClass("green")
+        }
+          $('img').hover(change_color)
+
+        var change_color=function()  {
+          $('body').toggleClass("blue")
+        }
+          $('input').hover(change_color)
+
+
+        var options = []
+        var submit = function() {
+          $('.inputSection').hide()
+          $('.resultSection').css('display', 'flex ')
+          $('input').each(function() {
+            options.push($(this).val())
+          $('.rubrik').hide()
+          $('.rubrik2').css('display' , 'flex')
+          })
+        var winner = options[Math.floor(Math.random() * options.length)]
+        console.log(winner)
+        $('.resultSection').text(winner)
+
+        }
+        $('.submit').click(submit)
 
       })
     </script>

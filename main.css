@@ -11,7 +11,24 @@ body.pink {
   background-color: #ffe6eb
 }
 
+body.green  {
+  background-color: #CCF0C3
+}
+
+body.blue  {
+  background-color: #4A9FF5
+}
+
 h1 {
+  font-family: 'Sigmar One', cursive;
+  font-weight: lighter;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+
+p {
+  font-family: 'Sigmar One', cursive;
   font-weight: lighter;
   font-size: 40px;
   letter-spacing: 2px;
@@ -35,4 +52,17 @@ input {
 
 .addOption {
   margin-top: 10px
+}
+
+.resultSection{
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Sigmar One', cursive;
+  font-size: 50px;
+}
+
+.rubrik2{
+  font-size: 40px;
 }
