@@ -4,6 +4,11 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 150px;
+  background-color: ##d1f4fa;
+}
+
+body.pink {
+  background-color: #ffe6eb
 }
 
 h1 {
@@ -30,8 +35,4 @@ input {
 
 .addOption {
   margin-top: 10px
-}
-
-html {
-  background-color: #FFCDCD;
 }
